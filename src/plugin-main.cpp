@@ -22,34 +22,31 @@ with this program. If not, see <https://www.gnu.org/licenses/>
 #include <plugin-support.h>
 #include "QRecDirPanel.h"
 
-extern "C" {
+extern "C"
+{
 	OBS_DECLARE_MODULE()
 	OBS_MODULE_USE_DEFAULT_LOCALE(PLUGIN_NAME, "en-US")
 
-	bool obs_module_load(void)
-	{
+	bool obs_module_load(void) {
 		obs_log(LOG_INFO, "plugin loading...");
 
 		// Create our custom panel and set it as the widget for the dock.
 		RecDirPanel *panel = new RecDirPanel();
 
 		// Add the dock widget to OBS’s main window.
-		obs_frontend_add_dock_by_id ("recdirpnl", "Recording Directory", panel);
+		obs_frontend_add_dock_by_id("recdirpnl", "Recording Directory", panel);
 
 		obs_log(LOG_INFO, "plugin loading successfully (version %s)", PLUGIN_VERSION);
 
 		return true;
 	}
 
-	void obs_module_unload(void)
-	{
+	void obs_module_unload(void) {
 		obs_log(LOG_INFO, "plugin unloaded");
 	}
 
 	// Provide a short description of the plugin.
-	const char *obs_module_description(void)
-	{
+	const char *obs_module_description(void) {
 		return "Plugin to quickly set the recording directory via a dockable panel.";
 	}
 } // extern "C"
-

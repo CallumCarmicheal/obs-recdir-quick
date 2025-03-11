@@ -1,7 +1,7 @@
 # please use clang-format version 16 or later
 
 Standard: c++17
-AccessModifierOffset: -8
+AccessModifierOffset: -4
 AlignAfterOpenBracket: Align
 AlignConsecutiveAssignments: false
 AlignConsecutiveDeclarations: false
@@ -27,12 +27,12 @@ BraceWrapping:
   AfterClass: false
   AfterControlStatement: false
   AfterEnum: false
-  AfterFunction: true
+  AfterFunction: false
   AfterNamespace: false
   AfterObjCDeclaration: false
   AfterStruct: false
   AfterUnion: false
-  AfterExternBlock: false
+  AfterExternBlock: true
   BeforeCatch: false
   BeforeElse: false
   IndentBraces: false
@@ -47,8 +47,8 @@ BreakStringLiterals: false  # apparently unpredictable
 ColumnLimit: 120
 CompactNamespaces: false
 ConstructorInitializerAllOnOneLineOrOnePerLine: true
-ConstructorInitializerIndentWidth: 8
-ContinuationIndentWidth: 8
+ConstructorInitializerIndentWidth: 4
+ContinuationIndentWidth: 4
 Cpp11BracedListStyle: true
 DerivePointerAlignment: false
 DisableFormat: false
@@ -60,14 +60,14 @@ ForEachMacros:
   - 'HASH_ITER'
 IncludeBlocks: Preserve
 IndentCaseLabels: false
-IndentPPDirectives: None
-IndentWidth: 8
+IndentPPDirectives: BeforeHash
+IndentWidth: 4
 IndentWrappedFunctionNames: false
 KeepEmptyLinesAtTheStartOfBlocks: true
 MaxEmptyLinesToKeep: 1
 NamespaceIndentation: None
 ObjCBinPackProtocolList: Auto
-ObjCBlockIndentWidth: 8
+ObjCBlockIndentWidth: 4
 ObjCSpaceAfterProperty: true
 ObjCSpaceBeforeProtocolList: true
 
@@ -106,7 +106,7 @@ TypenameMacros:
 UseTab: ForContinuationAndIndentation
 ---
 Language: ObjC
-AccessModifierOffset: 2
+AccessModifierOffset: -4
 AlignArrayOfStructures: Right
 AlignConsecutiveAssignments: None
 AlignConsecutiveBitFields: None
@@ -129,7 +129,7 @@ BraceWrapping:
   AfterClass: true
   AfterControlStatement: Never
   AfterEnum: false
-  AfterFunction: true
+  AfterFunction: false
   AfterNamespace: false
   AfterObjCDeclaration: false
   AfterStruct: false
