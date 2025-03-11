@@ -6,6 +6,8 @@
 #include <QFileDialog>
 #include <QDockWidget>
 
+#include <obs-frontend-api.h>
+
 class TailScrollingLineEdit : public QLineEdit {
 	Q_OBJECT
 
